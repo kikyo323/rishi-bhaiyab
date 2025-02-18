@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Rishi Bhaiya!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            font-size: 36px;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.4);
+        }
+        p {
+            font-size: 18px;
+            color: #fff;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        .btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease-in-out;
+            backdrop-filter: blur(10px);
+        }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.4);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ff7f50;
+            opacity: 0.7;
+            animation: fall 4s linear infinite;
+        }
+        @keyframes fall {
+            from {
+                transform: translateY(-100vh);
+            }
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><img src="images/bith dAY.PNG" height="20" , width="15"> Happy Birthday Rishi bhaiya</h1>
+        <img src="images/rishi.jpeg" alt="Birthday Person">
+        <p>Wishing you a fantastic year ahead filled with happiness, success, and great memories! 🎈🎁</p>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn">Click for a Surprise  </a>
+    </div>
+    
+    <script>
+        function createConfetti() {
+            for (let i = 0; i < 100; i++) {
+                let confetti = document.createElement("div");
+                confetti.className = "confetti";
+                confetti.style.left = Math.random() * 100 + "vw";
+                confetti.style.animationDuration = Math.random() * 3 + 2 + "s";
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 4000);
+            }
+        }
+        createConfetti();
+        setInterval(createConfetti, 4000);
+    </script>
+</body>
+</html>
